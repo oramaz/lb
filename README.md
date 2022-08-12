@@ -4,7 +4,7 @@
     docker-compose up
 
 ### Description
-Program brings a list of urls from a `config.json` file and serves these services with a separate load-balancing service.
+Program brings a list of urls from a `config.json` file and serves these services with a separate load-balancing service in localhost.
 
 `spam.go` file is executing to simulate the requests to a load-balancing service.
 
