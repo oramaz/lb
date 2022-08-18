@@ -1,21 +1,19 @@
 version: '3'
 
-# Define services
 services:
-  # App Service
+  # Load-balancer service
   app:
-    # Configuration for building the docker image for the service
     build:
-      context: . # Use an image built from the specified dockerfile in the current directory.
+      context: .
       dockerfile: Dockerfile.lb
     ports:
       - '8080:8080'
     restart: unless-stopped
 
-  # Requests spammer
+  # Requests spammer service
   spam:
     build:
-      context: . # Use an image built from the specified dockerfile in the current directory.
+      context: .
       dockerfile: Dockerfile.spam
     restart: unless-stopped
     depends_on:
